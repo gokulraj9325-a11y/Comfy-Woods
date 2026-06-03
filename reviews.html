@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>People Reviews - Furniture TN</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      /* background:#93572b; */
+      padding:30px;
+    }
+
+    h1{
+      text-align:center;
+      margin-bottom:40px;
+      color:#222;
+    }
+
+    .reviews-container{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:25px;
+      background:#93572b;
+
+    }
+
+    .review-card{
+      background:#fff;
+      padding:20px;
+      border-radius:15px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.1);
+      transition:0.3s;
+    }
+
+    .review-card:hover{
+      transform:translateY(-8px);
+    }
+
+    .profile{
+      display:flex;
+      align-items:center;
+      margin-bottom:15px;
+    }
+
+    .profile img{
+      width:60px;
+      height:60px;
+      border-radius:50%;
+      object-fit:cover;
+      margin-right:15px;
+    }
+
+    .profile h2{
+      font-size:20px;
+      color:#222;
+    }
+
+    .rating{
+      color:orange;
+      margin:10px 0;
+      font-size:18px;
+    }
+
+    .review-text{
+      color:#555;
+      line-height:1.6;
+      margin-bottom:15px;
+    }
+
+    .company{
+      font-weight:bold;
+      color:#007bff;
+    }
+
+    /* Tablet */
+    @media(max-width:992px){
+      .reviews-container{
+        grid-template-columns:repeat(2,1fr);
+      }
+    }
+
+    /* Mobile */
+    @media(max-width:600px){
+      .reviews-container{
+        grid-template-columns:1fr;
+      }
+
+      body{
+        padding:15px;
+      }
+    }
+
+   
+
+.footer{
+  background:#111;
+  color:white;
+  margin-top:50px;
+  padding:40px 20px 10px;
+}
+
+.footer-container{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:30px;
+}
+
+.footer-box h2{
+  margin-bottom:20px;
+  font-size:24px;
+}
+
+.payment-cards img{
+  width:70px;
+  margin-right:10px;
+  background:white;
+  padding:5px;
+  border-radius:8px;
+}
+
+.social-links a{
+  margin-right:15px;
+}
+
+.social-links img{
+  width:45px;
+  transition:0.3s;
+}
+
+.social-links img:hover{
+  transform:scale(1.1);
+}
+
+.copyright{
+  text-align:center;
+  border-top:1px solid #444;
+  margin-top:30px;
+  padding-top:15px;
+  font-size:15px;
+  color:#bbb;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+  .footer-container{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .payment-cards img{
+    margin-bottom:10px;
+  }
+
+}
+
+
+  </style>
+
+</head>
+<body>
+<section id="review">
+  <h1>People Reviews on Furniture Stores</h1>
+
+  <div class="reviews-container">
+
+    <!-- Review 1 -->
+    <div class="review-card">
+      <div class="profile">
+        <img src="default">
+        <div>
+          <h2>Arun Kumar</h2>
+          <p class="company"></p>
+        </div>
+      </div>
+
+      <div class="rating">★★★★★</div>
+
+      <p class="review-text">
+        Amazing sofa quality and quick delivery. The furniture looks premium.
+      </p>
+    </div>
+
+    <!-- Review 2 -->
+    <div class="review-card">
+      <div class="profile">
+        <img src="flower">
+        <div>
+          <h2>Priya</h2>
+          <p class="company"></p>
+        </div>
+      </div>
+
+      <div class="rating">★★★★☆</div>
+
+      <p class="review-text">
+        Beautiful dining table designs with excellent customer support.
+      </p>
+    </div>
+
+    <!-- Review 3 -->
+    <div class="review-card">
+      <div class="profile">
+        <img src="cm">
+        <div>
+          <h2>Vijay</h2>
+          <p class="company"></p>
+        </div>
+      </div>
+
+      <div class="rating">★★★★☆</div>
+
+      <p class="review-text">
+        Affordable furniture with decent quality. Worth the price.
+      </p>
+    </div>
+
+    <!-- Review 4 -->
+    <div class="review-card">
+      <div class="profile">
+        <img src="fly">
+        <div>
+          <h2>Divya</h2>
+          <p class="company"></p>
+        </div>
+      </div>
+
+      <div class="rating">★★★★★</div>
+
+      <p class="review-text">
+        Loved the wooden bed collection and online shopping experience.
+      </p>
+    </div>
+
+    <!-- Review 5 -->
+    <div class="review-card">
+      <div class="profile">
+        <img src="https://randomuser.me/api/portraits/men/5.jpg">
+        <div>
+          <h2>Suresh</h2>
+          <p class="company"></p>
+        </div>
+      </div>
+
+      <div class="rating">★★★★☆</div>
+
+      <p class="review-text">
+        Modern designs and smart storage options for small apartments.
+      </p>
+    </div>
+
+    <!-- Review 6 -->
+    <div class="review-card">
+      <div class="profile">
+        <img src="default">
+        <div>
+          <h2>Anitha</h2>
+          <p class="company"></p>
+        </div>
+      </div>
+
+      <div class="rating">★★★★★</div>
+
+      <p class="review-text">
+        Luxury furniture with classy finishing and stylish interiors.
+      </p>
+    </div>
+
+    <!-- Review 7 -->
+    <div class="review-card">
+      <div class="profile">
+        <img src="https://randomuser.me/api/portraits/men/7.jpg">
+        <div>
+          <h2>Karthik</h2>
+          <p class="company"></p>
+        </div>
+      </div>
+
+      <div class="rating">★★★★☆</div>
+
+      <p class="review-text">
+        Strong wood quality and durable furniture for family use.
+      </p>
+    </div>
+
+    <!-- Review 8 -->
+    <div class="review-card">
+      <div class="profile">
+        <img src="https://randomuser.me/api/portraits/women/8.jpg">
+        <div>
+          <h2>Meena</h2>
+          <p class="company"></p>
+        </div>
+      </div>
+
+      <div class="rating">★★★★★</div>
+
+      <p class="review-text">
+        Premium office chairs and excellent comfort for work setup.
+      </p>
+    </div>
+
+    <!-- Review 9 -->
+    <div class="review-card">
+      <div class="profile">
+        <img src="https://randomuser.me/api/portraits/men/9.jpg">
+        <div>
+          <h2>Ravi</h2>
+          <p class="company"></p>
+        </div>
+      </div>
+
+      <div class="rating">★★★★☆</div>
+
+      <p class="review-text">
+        Custom furniture options are really good and delivery was fast.
+      </p>
+    </div>
+
+  </div>
+  </section>
+
+  <section id="footer">
+    <!-- FOOTER SECTION START -->
+
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <!-- Payment Section -->
+    <div class="footer-box">
+      <h2>Payment Accepted</h2>
+
+      <div class="payment-cards">
+        <img src="https://img.icons8.com/color/96/visa.png" alt="Visa">
+        <img src="https://img.icons8.com/color/96/mastercard-logo.png" alt="MasterCard">
+        <img src="https://img.icons8.com/color/96/rupay.png" alt="RuPay">
+        <img src="https://img.icons8.com/color/96/paytm.png" alt="Paytm">
+      </div>
+    </div>
+
+    <!-- Social Media -->
+    <div class="footer-box">
+      <h2>Follow Us</h2>
+
+      <div class="social-links">
+
+        <a href="https://facebook.com" target="_blank">
+          <img src="https://img.icons8.com/color/48/facebook-new.png"/>
+        </a>
+
+        <a href="https://instagram.com" target="_blank">
+          <img src="https://img.icons8.com/color/48/instagram-new.png"/>
+        </a>
+
+        <a href="https://twitter.com" target="_blank">
+          <img src="https://img.icons8.com/color/48/twitter.png"/>
+        </a>
+
+        <a href="https://youtube.com" target="_blank">
+          <img src="https://img.icons8.com/color/48/youtube-play.png"/>
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Copyright -->
+  <div class="copyright">
+    © 2026 COMFY WOODS | All Rights Reserved
+  </div>
+
+</footer>
+
+<!-- FOOTER SECTION END -->
+
+
+
+  </section>
+
+</body>
+</html>

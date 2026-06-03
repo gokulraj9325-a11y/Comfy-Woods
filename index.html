@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMFY WOODS </title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .header{
+          /* position: sticky; */
+          position: fixed; 
+          /* display: flex; */
+        width: 94%;
+        border-radius: 10px;
+
+
+          /* z-index: 1; */
+        }
+  
+        .header1
+        {
+            /* margin:0px; */
+            background-color: rgba(132, 93, 2, 0.705);
+            display: flex;
+            text-align:left;
+             /* position: fixed; */
+            border-radius: 3px;
+        }
+        .h1{
+          position: relative;
+          right: 100px ;
+          top: 30px;
+        font-size: 30px;
+        }
+        nav a
+        {
+            position: relative;
+            text-decoration:none;
+            bottom: 40px;
+            font-size: medium;
+            left: 470px;
+            margin: 15px;
+            color: #f4dfcb;
+           
+        }
+          nav a:hover
+        {
+            position: relative;
+            text-decoration:none;
+            bottom: 40px;
+            font-size: medium;
+            left: 470px;
+            margin: 15px;
+            color: #000000;}
+        img{
+            border-radius: 75px;
+            bottom: 30px;
+        }
+     
+        img{
+            height: 40%;
+            width: 100%;
+            /* width: 100px; */
+             border-radius: 10px 10px 0px 0px; 
+            /* position: relative; */
+            
+        }
+        h4,p{
+            margin: 10px;
+        }
+        p{
+            text-align:left;
+
+        }
+        button{
+            position: relative;
+            left:10px;
+            right: 10px;
+            bottom:17px ;
+            
+        }
+ .headimg{
+    height: 300px;
+    width: 400px;
+    position: relative;
+    left: 600px;
+    bottom: 230px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 30px rgb(14, 15, 80);
+    
+ }
+   :root {
+  --primary-color: #1a1a1a;
+  --accent-color: #bfa183; /* Warm beige/oak tone */
+  --text-light: #ffffff;
+  --transition-speed: 0.5s;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Carousel Wrapper */
+.carousel-container
+ {
+  z-index: -1;
+  position: relative;
+  max-width: 1100px;
+  height: 500px;
+  margin: 0px auto;
+  overflow: hidden;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgb(119, 85, 40);
+}
+
+/* Track holding the slides */
+.carousel-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* Individual Slides */
+.carousel-slide {
+  min-width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  transition: opacity var(--transition-speed) ease-in-out;
+  z-index: 1;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+  position: relative;
+  z-index: 2;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Text Overlay Styling */
+.slide-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.75));
+  color: var(--text-light);
+  padding: 60px 40px 40px 40px;
+}
+
+.badge {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  padding: 4px 12px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-radius: 2px;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.slide-content h2 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 10px;
+  letter-spacing: -0.5px;
+}
+
+.slide-content p {
+  font-size: 1.05rem;
+  max-width: 600px;
+  opacity: 0.9;
+  line-height: 1.5;
+}
+
+/* Last Slide (CTA Specific) */
+.carousel-slide:last-child {
+  background-color: #f7f5f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.cta-slide-content {
+  color: var(--primary-color);
+  padding: 40px;
+}
+
+.cta-slide-content h2 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.cta-slide-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.shop-btn {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 15px 35px;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: background 0.3s;
+}
+
+.shop-btn:hover {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+}
+
+/* Navigation Arrows */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.nav-btn:hover {
+  background: white;
+  transform: translateY(-50%) scale(1.05);
+}
+
+.prev-btn { left: 10px; }
+.next-btn { left:  910px; }
+
+/* Indicator Dots */
+.carousel-dots {
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.4);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+/* If it's the last slide, make dots dark so they're visible */
+.carousel-slide:last-child.active ~ .carousel-dots .dot {
+  background: rgba(0,0,0,0.2);
+}
+
+.carousel-slide:last-child.active ~ .carousel-dots .dot.active {
+  background: var(--primary-color);
+}
+
+.dot.active {
+  background: white;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+  .carousel-container { height: 450px; margin: 10px; }
+  .slide-content h2 { font-size: 1.8rem; }
+  .slide-content p { font-size: 0.95rem; }
+  .nav-btn { width: 40px; height: 40px; font-size: 1rem; }
+  .prev-btn { left: 10px; }
+  .next-btn { right: 10px; }
+  .carousel-dots { right: 50%; transform: translateX(50%); }
+}
+         #cakes{
+      /* padding:10px; */
+      text-align:center;
+    }
+
+    #cakes h2{
+      font-size:40px;
+      color:#522a07;
+      margin-bottom:20px;
+    }
+
+    .cake-container{
+      display:flex;
+      justify-content:center;
+      /* gap:40px; */
+      flex-wrap:wrap;
+     background-color: #75563a;
+     padding-top: 15px;
+     box-shadow: 1px 1px 50px rgb(57, 29, 11);
+     border-radius: 15px 15px 15px 15px;
+      /* width:150vh; 
+     height: 120vh; */
+      margin: 0px; 
+    }
+
+    .card{
+      background:rgb(242, 193, 145);
+   flex: 27%; 
+      padding:10px;
+   height: 350px;
+  width: 700px; 
+      border-radius:15px;
+      justify-content: space-between;
+      box-shadow:0 10px 17px #261905f8;
+      margin: 20px;
+      /* transition-duration: -2s; */
+      transition:0.3s;
+      
+        
+    }
+
+    .card img{
+       width:100%; 
+       height:40%; 
+      object-fit:cover;
+      border-radius:10px;
+      
+    }
+
+    .card h3{
+      margin:15px 0;
+      color:#954512;
+    }
+
+    .card p{
+      margin-bottom:15px;
+    }
+
+    .card button{
+      padding:10px 20px;
+      border:none;
+      background:#7b4302;
+      color:rgb(255, 255, 255);
+      border-radius:6px;
+      cursor:pointer;
+      right: 10px;
+    }
+     .card button:hover{
+      padding:10px 20px;
+      border:none;
+      background:#ffffff;
+      color:#7b4302;
+      border-radius:6px;
+      cursor:pointer;
+      right: 10px;
+    }
+    .card:hover{
+       transform:translateY(-8px);
+    }
+    .aboutus{
+      background-color: #705132;
+      gap: 0px;
+      text-align: center; 
+      padding: 80px; 
+      border-radius: 15px ; 
+      color: #d0c6a5; 
+      box-shadow: 1px 1px 35px rgb(71, 15, 15);
+    }
+    .reviews{
+      background-color: #705132;
+      box-shadow:1px 1px 35px rgb(71, 15, 15); 
+      border-radius: 15px ;
+      font-size: 30px;
+    
+
+    }
+    /* *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    } */
+
+    body{
+      /* background:#93572b; */
+      padding:30px;
+    }
+
+    h1{
+      text-align:center;
+      margin-bottom:40px;
+      color:#222;
+    }
+
+    .reviews-container{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:15px;
+      /* margin: 10px; ; */
+      background:#705132;
+      border-radius: 15px;
+
+    }
+
+    .review-card{
+      background:#ffffff;
+      /* padding:20px; */
+      border-radius:30px;
+      box-shadow:0 6px 12px rgb(0, 0, 0);
+      transition:0.3s;
+      margin: 7px;
+    }
+
+    .review-card:hover{
+      transform:translateY(-8px);
+    }
+
+    .profile{
+      display:flex;
+      align-items:center;
+      margin-bottom:15px;
+    }
+
+    .profile img{
+      width:60px;
+      height:60px;
+      border-radius:50%;
+      object-fit:cover;
+      margin-right:15px;
+    }
+
+    .profile h2{
+      font-size:20px;
+      color:#222;
+    }
+
+    .rating{
+      color:orange;
+      margin:10px 0;
+      font-size:18px;
+    }
+
+    .review-text{
+      color:#555;
+      line-height:1.6;
+      margin-bottom:15px;
+    }
+
+    .company{
+      font-weight:bold;
+      color:#007bff;
+    }
+
+    /* Tablet */
+    @media(max-width:992px){
+      .reviews-container{
+        grid-template-columns:repeat(2,1fr);
+      }
+    }
+
+    /* Mobile */
+    @media(max-width:600px){
+      .reviews-container{
+        grid-template-columns:1fr;
+      }
+
+      body{
+        padding:15px;
+      }
+    }
+
+.footer{
+  background:#000000;
+  color:rgb(255, 255, 255);
+  margin-top:40px;
+  padding:4px 5px 10px;
+}
+
+.footer-container{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:20px;
+}
+
+
+
+.payment-cards img{
+  width:40px;
+  margin-right:5px;
+  background:rgb(196, 193, 193);
+  padding:5px;
+  border-radius:10px;
+}
+
+.social-links a{
+  margin-right:15px;
+}
+
+.social-links img{
+  width:45px;
+  transition:0.3s;
+}
+
+.social-links img:hover{
+  transform:scale(1.1);
+}
+
+.copyright{
+  text-align:center;
+  border-top:1px solid #444;
+  margin-top:30px;
+  padding-top:15px;
+  font-size:15px;
+  color:#bbb;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+  .footer-container{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .payment-cards img{
+    margin-bottom:0px;
+  }
+
+}
+.reviewname{
+  font-size: 2rem;
+  color: brown;
+}
+.pay{
+  font-size: 1.3rem;
+  font-weight: lighter;
+  
+}
+    </style>
+</head>
+<body>
+  <div class="header">
+    <section class="header1">
+<header>
+    <h1 class="h1"><span style="color: #f3e6b5;font-size:3.5rem;">C</span>OMFY WOODS</header</h1>
+    <nav >
+        <a href="#HOME">HOME</a>
+        <a href="#NEW COLLECTION">NEW COLLECTION</a>
+        <a href="#ABOUT US">ABOUT US</a>
+        <a href="#REVIEWS">REVIEWS</a>
+    </nav>
+</header>
+</div>
+</section>
+ <div class="carousel-container">
+  <!-- Carousel Track -->
+  <div class="carousel-track">
+    
+    <!-- Slide 1 -->
+    <div class="carousel-slide active">
+      <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=1200&q=80" alt="Oak Sideboard Main">
+      <div class="slide-content">
+        <span class="badge">Versatility Showdown</span>
+        <h2>One Sideboard, Three Different Vibes.</h2>
+        <p>See how our signature comfy woods adapts to every room in your house. Swipe to explore.</p>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="carousel-slide">
+      <img src="d" alt="Dining Room Buffet Setup">
+      <div class="slide-content">
+        <span class="badge">Vibe 01</span>
+        <h2>The Elegant Dining Buffet</h2>
+        <p>Styled with ceramic dinnerware, premium wine racks, and a statement vase for dinner parties.</p>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="carousel-slide">
+      <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1200&q=80" alt="Entryway Console Setup">
+      <div class="slide-content">
+        <span class="badge">Vibe 02</span>
+        <h2>The Warm Entryway Welcome</h2>
+        <p>Paired with an oversized round mirror, a minimalist catch-all bowl, and storage baskets underneath.</p>
+      </div>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="carousel-slide">
+      <div class="cta-slide-content">
+        <h2><strong>MAKE YOUR WORLD COMFORTABLE</strong>.</h2>
+        <p>Crafted from sustainably sourced woods. Designed for life's changing rhythms.</p>
+        <a href="#" class="shop-btn">Shop COMFY WOODS</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Navigation Controls -->
+  <button class="nav-btn prev-btn" aria-label="Previous Slide">&#10094;</button>
+  <button class="nav-btn next-btn" aria-label="Next Slide">&#10095;</button>
+
+  <!-- Indicator Dots -->
+  <div class="carousel-dots">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+</div>
+<br><br><br>
+  <section id="NEW COLLECTION">
+
+    <h2 align="center">NEW COLLECTIONS</h2>
+
+    <div class="cake-container">
+
+      <div class="card">
+        <img src="table">
+        <h3>COFFEE TABLE</h3>
+        <p><strong> oak wood<br>weight 25Kg<br><h3>₹15599</h3></strong></p>
+        <button><b>Buy Now</b></button>
+      </div>
+
+      <div class="card">
+        <img src="sofa">
+        <h3>SOFA</h3>
+        <p><strong>soft cushion<br>single seater<br><h3>₹12999</h3></strong></p>
+        <button>Buy Now</button>
+      </div>
+
+      <div class="card">
+        <img src="bed">
+        <h3>BED</h3>
+        <p><strong>soft cushion<br>pine wood<br><h3>₹99999</h3></strong></p>
+        <button>Buy Now</button>
+      </div>
+        <div class="card">
+        <img src="3">
+        <h3>DINING SET</h3>
+        <p><strong>maple wood <br>3 seater<br><h3>₹34999</h3></strong></p>
+        <button>Buy Now</button>
+      </div>
+
+      <div class="card">
+        <img src="STUDY TABLE">
+        <h3>STUDY TABLE</h3>
+       <p><strong>walnut wood<br>durable<br><h3>₹25000</h3></strong></p>
+        <button>Buy Now</button>
+      </div>
+
+      <div class="card">
+        <img src="BOOK">
+        <h3>BOOK SHELF</h3>
+        <p><strong>snakewood<br>4 rows<br><h3>₹17999</h3></strong></p>
+        <button>Buy Now</button>
+      </div>
+    </div>
+      
+
+
+  </section >
+      <br><br><br>
+      <section id="ABOUT US">
+     <h2 align="center">NEW COLLECTIONS</h2>
+      <div class="aboutus"
+      <p><i><h3><strong style="color: #090500;"<mark>ABOUT COMFY WOODS</mark></strong>
+Crafting Digital Spaces That Feel Like Home
+Welcome to Comfy Woods, where high-end web design meets intentional, human-centered digital experiences.
+
+We believe that the internet is crowded enough with noisy, chaotic websites. That’s why we take a different approach. Just like a well-crafted cabin in the woods, a great website should be inviting, seamlessly functional, and effortlessly comforting to navigate. We combine clean code with warm aesthetics to build digital spaces where your audience actually wants to hang out.</h3></i></p>
+<br>
+<h3>"Design is not just what it looks like and feels like. Design is how it works."
+<strong>— Steve Jobs</strong></h3></div>
+</section>
+<br><br><br>
+<section id="REVIEWS">
+  <h2 align="center">PEOPLE REVIEWS</h2>
+
+  <div class="reviews-container">
+
+    <!-- Review 1 -->
+    <div class="review-card">
+      <div class="profile">
+        <img src="default">
+        <div>
+          <h2>Arun</h2>
+          <p class="company"></p>
+        </div>
+      </div>
+
+      <div class="rating">★★★★★</div>
+
+      <p class="review-text">
+        Amazing sofa quality and quick delivery. The furniture looks premium.
+      </p>
+    </div>
+
+    <!-- Review 2 -->
+    <div class="review-card">
+      <div class="profile">
+        <img src="flower">
+        <div>
+          <h2>Priya</h2>
+          <p class="company"></p>
+        </div>
+      </div>
+
+      <div class="rating">★★★★☆</div>
+
+      <p class="review-text">
+        Beautiful dining table designs with excellent customer support.
+      </p>
+    </div>
+
+    <!-- Review 3 -->
+    <div class="review-card">
+      <div class="profile">
+        <img src="cm">
+        <div>
+          <h2>Vijay</h2>
+          <p class="company"></p>
+        </div>
+      </div>
+
+      <div class="rating">★★★★☆</div>
+
+      <p class="review-text">
+        Affordable furniture with decent quality. Worth the price.
+      </p>
+    </div>
+
+    <!-- Review 4 -->
+    <div class="review-card">
+      <div class="profile">
+        <img src="fly">
+        <div>
+          <h2>Divya</h2>
+          <p class="company"></p>
+        </div>
+      </div>
+
+      <div class="rating">★★★★★</div>
+
+      <p class="review-text">
+        Loved the wooden bed collection and online shopping experience.
+      </p>
+    </div>
+
+    <!-- Review 5 -->
+    <div class="review-card">
+      <div class="profile">
+        <img src="https://randomuser.me/api/portraits/men/5.jpg">
+        <div>
+          <h2>Suresh</h2>
+          <p class="company"></p>
+        </div>
+      </div>
+
+      <div class="rating">★★★★☆</div>
+
+      <p class="review-text">
+        Modern designs and smart storage options for small apartments.
+      </p>
+    </div>
+
+    <!-- Review 6 -->
+    <div class="review-card">
+      <div class="profile">
+        <img src="default">
+        <div>
+          <h2>Anitha</h2>
+          <p class="company"></p>
+        </div>
+      </div>
+
+      <div class="rating">★★★★★</div>
+
+      <p class="review-text">
+        Luxury furniture with classy finishing and stylish interiors.
+      </p>
+    </div>
+
+    <!-- Review 7 -->
+    <div class="review-card">
+      <div class="profile">
+        <img src="https://randomuser.me/api/portraits/men/7.jpg">
+        <div>
+          <h2>Karthik</h2>
+          <p class="company"></p>
+        </div>
+      </div>
+
+      <div class="rating">★★★★☆</div>
+
+      <p class="review-text">
+        Strong wood quality and durable furniture for family use.
+      </p>
+    </div>
+
+    <!-- Review 8 -->
+    <div class="review-card">
+      <div class="profile">
+        <img src="https://randomuser.me/api/portraits/women/8.jpg">
+        <div>
+          <h2>Meena</h2>
+          <p class="company"></p>
+        </div>
+      </div>
+
+      <div class="rating">★★★★★</div>
+
+      <p class="review-text">
+        Premium office chairs and excellent comfort for work setup.
+      </p>
+    </div>
+
+    <!-- Review 9 -->
+    <div class="review-card">
+      <div class="profile">
+        <img src="https://randomuser.me/api/portraits/men/9.jpg">
+        <div>
+          <h2>Ravi</h2>
+          <p class="company"></p>
+        </div>
+      </div>
+
+      <div class="rating">★★★★☆</div>
+
+      <p class="review-text">
+        Custom furniture options are really good and delivery was fast.
+      </p>
+    </div>
+
+  </div>
+  </section>
+
+  <section id="footer">
+    <!-- FOOTER SECTION START -->
+
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <!-- Payment Section -->
+    <div class="footer-box">
+      <h6 class="pay">Payment Accepted</h6><br>
+
+      <div class="payment-cards">
+        <img src="https://img.icons8.com/color/96/visa.png" alt="Visa">
+        <img src="https://img.icons8.com/color/96/mastercard-logo.png" alt="MasterCard">
+        <img src="https://img.icons8.com/color/96/rupay.png" alt="RuPay">
+        <img src="https://img.icons8.com/color/96/paytm.png" alt="Paytm">
+      </div>
+    </div>
+
+    <!-- Social Media -->
+    <div class="footer-box">
+      <h5 class="pay">Follow Us</h5><br>
+
+      <div class="social-links">
+
+        <a href="https://facebook.com" target="_blank">
+          <img src="https://img.icons8.com/color/48/facebook-new.png"/>
+        </a>
+
+        <a href="https://instagram.com" target="_blank">
+          <img src="https://img.icons8.com/color/48/instagram-new.png"/>
+        </a>
+
+        <a href="https://twitter.com" target="_blank">
+          <img src="https://img.icons8.com/color/48/twitter.png"/>
+        </a>
+
+        <a href="https://youtube.com" target="_blank">
+          <img src="https://img.icons8.com/color/48/youtube-play.png"/>
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Copyright -->
+  <div class="copyright">
+    © 2026 COMFY WOODS | All Rights Reserved
+  </div>
+
+</footer>
+
+<!-- FOOTER SECTION END -->
+
+
+
+  </section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+  const slides = document.querySelectorAll('.carousel-slide');
+  const dots = document.querySelectorAll('.dot');
+  const prevBtn = document.querySelector('.prev-btn');
+  const nextBtn = document.querySelector('.next-btn');
+  
+  let currentSlide = 0;
+
+  function updateCarousel(index) {
+    // Remove active class from current slide and dot
+    slides[currentSlide].classList.remove('active');
+    dots[currentSlide].classList.remove('active');
+    
+    // Set new current slide index
+    currentSlide = index;
+    
+    // Handle boundary loops
+    if (currentSlide >= slides.length) currentSlide = 0;
+    if (currentSlide < 0) currentSlide = slides.length - 1;
+    
+    // Add active class to new slide and dot
+    slides[currentSlide].classList.add('active');
+    dots[currentSlide].classList.add('active');
+  }
+
+  // Next & Prev Button Event Listeners
+  nextBtn.addEventListener('click', () => updateCarousel(currentSlide + 1));
+  prevBtn.addEventListener('click', () => updateCarousel(currentSlide - 1));
+
+  // Dot Click Event Listeners
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => updateCarousel(index));
+  });
+
+  // Optional: Keyboard Arrow Support
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') updateCarousel(currentSlide + 1);
+    if (e.key === 'ArrowLeft') updateCarousel(currentSlide - 1);
+  });
+});
+</script>
+  
+
+
+
+
+    </div>
+
+
+
+
+    
+</body>
+</html>
